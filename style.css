@@ -1,0 +1,23 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html{
+   scroll-behavior: smooth;
+}
+
+:roots{
+    --nav:#ddfaf8;
+
+}
+
+body{
+    background: black;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+nav{
+    background-color: #ddfaf8;
+    height: 10dvh;
+    width: 100%;
+}
