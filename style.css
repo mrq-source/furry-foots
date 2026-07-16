@@ -17,7 +17,79 @@ body{
     overflow-x: hidden;
 }
 nav{
+    display: flex;
+    flex-direction: row;
     background-color: #ddfaf8;
-    height: 10dvh;
+    height: 12dvh;
     width: 100%;
+    position: sticky;
+}
+img {
+    width: 10dvw;
+    height: 20vh;
+    position: absolute;
+    top: -25px;
+}
+#logo2{
+    position: absolute;
+    left: 8.6dvw;
+    height: 10dvh;
+    width: 10vw;
+    top: 10px;
+}
+
+nav{
+    width: 100dvw;
+    height: 12dvh;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    
+}
+.nav-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+nav i{
+    width: 20px;
+    height: 12dvh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    top: 1.5dvh;
+    font-size:30px;
+}
+.hamburger{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+}
+.sidebar{
+    position: absolute;
+    right: -10dvw;
+    background-color: #023047;
+    width: 10dvw;
+    height: 20dvh;
+    visibility: hidden;
+}
+.hamburger:hover x.sidebar{
+    visibility: visible;
+    transition: right 10dvw;
+    width: 10dvw;
+    height: 20dvh;
 }
