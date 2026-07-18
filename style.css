@@ -13,16 +13,19 @@ body{
     background: white;
     color: #fff;
     font-family: 'Space Mono', monospace;
-    min-height: 100dvh;
+    height: 100dvh;
     overflow-x: hidden;
 }
+
+/* navigation panel */
+
 nav{
     display: flex;
     flex-direction: row;
     background-color: #ddfaf8;
     height: 12dvh;
     width: 100%;
-    position: sticky;
+    position: fixed;
 }
 img {
     width: 10dvw;
@@ -45,7 +48,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 100;
     
@@ -104,37 +107,125 @@ nav i {
     color: white;
     padding: 15px 20px;
     text-decoration: none;
+
+    width: fit-content;
+    height: fit-content;
 }
+.sidebar ul li a:hover{
+    color:cornflowerblue;
+
+}
+.links{
+    color: x;
+}
+
+/* hero section */
+
 .hero{
     color: black;
     width: 100%;
-    height: 88dvh;
-    background-color: #023047;
+    height: 100dvh;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 .name{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-self: center;
     align-items: center;
+    align-self:center;
     position:absolute;
-    left: 15rem;
+    width: 77%;
     top: 2em;
     height: 4em;
     font-size: 70px;
-    background-color:aqua;
+    line-height: 0.8;
+    color: #1b7a9e;
+
+
+    h2{
+        font-family: "Rubik Spray Paint",cursive;
+        font-size: 55px;
+        align-self: baseline;
+        font-weight: 100;
+        
+    }
+
+    h1{
+        font-family: "Playfair Display", cursive;
+        align-self: center;
+    }
 }
 #img{
     width: 100%;
-    height: 12rem;
-    background-color: brown;
+    height: 16rem;
     position: absolute;
     bottom: 0;
+    z-index: 2;
 }
 #img1{
     position: absolute;
-    right: 10rem;
+    top: -12rem;
+    right: 7rem;
+    width: 500px;
+    height: 448px;
+    z-index: 3;
+}
+#img2{
+    position: absolute;
+    top: -9rem;
+    right: 41em;
+    width: 500px;
+    height: 400px;
+    transform: scaleX(-1);
+    z-index: 4;
+}
+#img3{
+    position: absolute;
+    top: -9rem;
+    right: 22rem;
+    width: 500px;
+    height: 400px;
+    z-index: 5;
+}
+#img4{
+    position: absolute;
+    top: -17rem;
+    right: -7rem;
+    width: 500px;
+    height: 528px;
+    z-index: 6;
+}
+#img5{
+    position: absolute;
+    top: -15.2rem;
+    left: -10rem;
     width: 500px;
     height: 500px;
+    z-index: 7;
 }
+
+/* about us */
+
+.aboutus{
+    background-color: #1b7a9e;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 80;
+    position: relative;
+}
+.aboutus .side-pic{
+    top: 150px;
+    left: 80px;
+    width: 400px;
+    height: 400px;
+}
+#text{
+    position: absolute;
+    left: 45%;
+    top: 90px;
+    font-size: 40px;
+}
+
