@@ -3,59 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Furry Foots</title>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/165c5d48e2.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Fruktur:ital@0;1&family=Irish+Grover&family=Margarine&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Spray+Paint&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
-    <title>Furry Foots</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Fruktur:ital@0;1&family=Irish+Grover&family=Margarine&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Spray+Paint&family=Unkempt:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/165c5d48e2.js" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 </head>
+
 <body>
+
+    <!-- ================= NAVBAR ================= -->
     <nav>
         <div class="logo" id="logo">
-            <img id="logo1" src="PETSHOP/edited-photo (2).png">
-            <img id="logo2" src="PETSHOP/edited-photo (9).png">
+            <img id="logo1" src="PETSHOP/edited-photo (2).png" alt="Furry Foots Logo">
+            <img id="logo2" src="PETSHOP/edited-photo (9).png" alt="Furry Foots Text Logo">
         </div>
-        <button class="hamburger"><i class="fa-solid fa-bars" style="color: rgb(0, 0, 0);"></i></button>
+
+        <button class="hamburger" type="button">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         <div class="sidebar">
             <ul class="links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
-                <li><a href="">Our Services</a></li>
-                <li><a href="">Testimonials</a></li>
-                <li><a href="">Our Pet's Room</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">location</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Our Pet's Room</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Location</a></li>
             </ul>
         </div>
     </nav>
+
+    <!-- ================= HERO ================= -->
     <section class="hero" id="hero">
         <div class="name">
-            <h2>WeLcoMe To</h2>
+            <h2>Welcome To</h2>
             <h1>FURRY FOOTS</h1>
         </div>
+
         <div id="img">
-        <img id="img1" src="PETSHOP/edited-photo (3).png">
-        <img id="img2" src="PETSHOP/edited-photo (4).png">
-        <img id="img3" src="PETSHOP/edited-photo (5).png">
-        <img id="img4" src="PETSHOP/edited-photo (6).png">
-        <img id="img5" src="PETSHOP/edited-photo (7).png">
+            <img id="img1" src="PETSHOP/edited-photo (3).png" alt="Dog">
+            <img id="img2" src="PETSHOP/edited-photo (4).png" alt="Pet Grooming">
+            <img id="img3" src="PETSHOP/edited-photo (5).png" alt="Pet">
+            <img id="img4" src="PETSHOP/edited-photo (6).png" alt="Pet">
+            <img id="img5" src="PETSHOP/edited-photo (7).png" alt="Pet">
         </div>
     </section>
-    <section class="about-Us" id="about-us">
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about-us" id="about-us">
         <div class="aboutus">
-            <img class="side-pic" src="PETSHOP/side-pic.jpeg">
+            <img class="side-pic" src="PETSHOP/side-pic.jpeg" alt="Pet Grooming">
+
             <div id="text">
                 <h2 id="text1">About Us</h2>
-                <p>At Furry Foots Pet Grooming Studio, we believe every pet deserves a safe, comfortable, and stress-free grooming experience. Our skilled groomers combine expert techniques with premium-quality products to provide personalized care that keeps your furry family members clean, healthy, and looking their best.</p>
+
+                <p>
+                    At Furry Foots Pet Grooming Studio, we believe every pet deserves
+                    a safe, comfortable, and stress-free grooming experience.
+                    Our skilled groomers combine expert techniques with premium-quality
+                    products to provide personalized care that keeps your furry family
+                    members clean, healthy, and looking their best.
+                </p>
             </div>
-            <button id="button1" name="location" type="button"><a href=""><span class="btn-icon"><i class="fa-solid fa-location-dot" style="color: rgb(253, 0, 0);"></i></span>Location</a></button>
-            <button id="button2" name="Whatsapp" type="button"><a href=""><span class="btn-icon"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i></span>Whatsapp</a></button>
+
+            <button id="button1" type="button">
+                <a href="#">
+                    <span class="btn-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    Location
+                </a>
+            </button>
+
+            <button id="button2" type="button">
+                <a href="#">
+                    <span class="btn-icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                    WhatsApp
+                </a>
+            </button>
         </div>
     </section>
-    <section class="Services">
-        
+
+    <!-- ================= SERVICES ================= -->
+    <section class="services">
+        <div class="s-text">
+            <h1 class="text">OUR SERVICES</h1>
+        </div>
+            <div class="s-img">
+                <img id="s-img1" src="PETSHOP/edited-photo (10).png">
+                <img id="s-img2" src="PETSHOP/edited-photo (12).png">
+                <img id="s-img3" src="PETSHOP/edited-photo (13).png">
+                <img id="s-img4" src="PETSHOP/edited-photo (14).png">
+                <img id="s-img5" src="PETSHOP/edited-photo (15).png">
+                <img id="s-img6" src="PETSHOP/edited-photo (16).png">
+                <img id="s-img7" src="PETSHOP/edited-photo (17).png">
+                <img id="s-img8" src="PETSHOP/edited-photo (18).png">
+            </div>
+        </div>
     </section>
+
 </body>
 </html>
