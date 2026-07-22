@@ -29,7 +29,7 @@ body {
 }
 
 section {
-    width: 100dvw;
+    width: 100100%;
     height: 100dvh;
 }
 
@@ -346,10 +346,140 @@ button a {
     position:absolute;
     transform: rotate(-90deg);
     align-self: center;
-    top: 20rem;
+    top: 19rem;
     left: -7rem;
     font-size: 35PX;
 }
 .s-img{
-    width: 700PX;
+    width: 900px;
+    height: 500px;
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    top: 5rem;
+}
+/* Core Bento Grid Setup */
+.bento-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 3 equal sections of 2 columns each */
+  grid-template-rows: repeat(4, minmax(110px, auto)); /* 4 equal row tracks */
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 400px;
+  color: #023047;
+}
+
+/* Base Card Styles mimicking the image aesthetics */
+.bento-card {
+  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  border: 1px solid #b3e5fc;
+  border-radius: 16px; /* Smooth rounded corners as pictured */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Pushes text down like the landscape graphics */
+  min-height: 100px;
+}
+
+/* --- Left Column Configurations --- */
+.card-1 {
+  grid-column:span 2;
+  grid-row:  1;
+  background-image: url(PETSHOP/edited-photo\ \(10\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.card-4 {
+  grid-column: span 1;
+  grid-row: span 2;
+  background-image: url(PETSHOP/edited-photo\ \(15\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.card-5 {
+  grid-column: span 1;
+  grid-row: span 1;
+  background-image: url(PETSHOP/edited-photo\ \(15\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.card-6 {
+  grid-column: span 1;
+  grid-row: span 1;
+  background-image: url(PETSHOP/edited-photo\ \(15\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+/* --- Middle Column Configurations --- */
+.card-2 {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-image: url(PETSHOP/edited-photo\ \(15\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.bento-container .card-3 {
+  grid-column: span 2;
+  grid-row: 2;
+  background-image: url(PETSHOP/edited-photo\ \(14\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+.card-7 {
+  grid-column: span 3;
+  grid-row: span 2;
+  background-image: url(PETSHOP/edited-photo\ \(16\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+}
+
+/* --- Right Column Configuration --- */
+.card-8 {
+  grid-column: span 3;
+  grid-row: span 1;
+  background-image: url(PETSHOP/edited-photo\ \(15\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay; 
+}
+.card-9 {
+  grid-column: span 3;
+  grid-row: span 1;
+  background-image: url(PETSHOP/edited-photo\ \(15\).png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay; 
+}
+
+/* Responsive Mobile Layout */
+@media (max-width: 768px) {
+  .bento-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .bento-card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-height: 150px;
+  }
 }
