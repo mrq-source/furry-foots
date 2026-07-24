@@ -541,7 +541,7 @@ button a {
     position: relative;
     justify-content: space-evenly;
     align-items: center;
-    animation: scroll-left 10s linear infinite;
+    animation: scroll-left 15s linear infinite;
     gap: 16px;
 }
 .t-card-1{
@@ -586,7 +586,7 @@ button a {
     background-color: #25d366;
 }
 @keyframes scroll-left {
-  0% { transform: translateX(0%); }
+  0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }   
 .marquee-container:hover .marquee {
@@ -598,7 +598,14 @@ button a {
     position: relative;
     top: 0;
     background-image: url(PETSHOP/img-4.jpeg);
-    background-position: center;
+    background-position: -2rem;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 10px 10px 0px 0px;
+}
+#t-text-1{
+    padding: 3px;
+}
+#t-img-2{
+    
 }
