@@ -12,9 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Fruktur:ital@0;1&family=Irish+Grover&family=Margarine&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Spray+Paint&family=Unkempt:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Fredericka+the+Great&family=Fruktur:ital@0;1&family=Irish+Grover&family=Luckiest+Guy&family=Margarine&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Spray+Paint&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/165c5d48e2.js" crossorigin="anonymous"></script>
@@ -38,11 +36,11 @@
 
         <div class="sidebar">
             <ul class="links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Our Pet's Room</a></li>
+                <li><a href="#hero" onclick="close">Home</a></li>
+                <li><a href="#about-us" onclick="close">About Us</a></li>
+                <li><a href="#services" onclick="close">Our Services</a></li>
+                <li><a href="#testimonials" onclick="close">Testimonials</a></li>
+                <li><a href="#" onclick="close">Our Pet's Room</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Location</a></li>
             </ul>
@@ -103,49 +101,57 @@
     </section>
 
     <!-- ================= SERVICES ================= -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="s-text">
-            <h1 class="text">OUR SERVICES</h1>
+            <h1>OUR SERVICES</h1>
         </div>
             <div class="s-img">
                 <div class="bento-container">
                     <div class="bento-card card-1">
-                        <h3>Card 1</h3>
-                        <p>Top-Left Square</p>
                     </div>
                     <div class="bento-card card-2">
-                        <h3>Card 2</h3>
-                        <p>Wide Horizontal</p>
                     </div>
                     <div class="bento-card card-3">
-                        <h3>Card 3</h3>
-                        <p>Wide Horizontal</p>
                     </div>
                     <div class="bento-card card-4">
-                        <h3>Card 4</h3>
-                        <p>Small Sq 1</p>
                     </div>
                     <div class="bento-card card-5">
-                        <h3>Card 5</h3>
-                        <p>Small Sq 2</p>
                     </div>
                     <div class="bento-card card-6">
-                        <h3>Card 6</h3>
-                        <p>Bottom-Left Wide</p>
                     </div>
                     <div class="bento-card card-7">
-                        <h3>Card 7</h3>
-                        <p>Bottom-Middle Square</p>
                     </div>
                     <div class="bento-card card-8">
-                        <h3>Card 8</h3>
-                        <p>Full Height Tall</p>
                     </div>
                     <div class="bento-card card-9">
-                        <h3>Card 9</h3>
-                        <p>Full Height Tall</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <div class="t-text">
+            <h1>Testimonials</h1>
+        </div>
+        <div class="marquee-container">
+            <div class="marquee">
+                <div class="t-card-1">
+                    <div id="t-img-1"></div>
+                    <div id="t-text-1">
+                        <h3>Namya Gala</h3>
+                        <h5>
+                            Loved the service by both the brothers.
+                            Loki enjoyed the environment of the studio. its very calm.
+                            Will visit again
+                        </h5>
+                    </div>
+                </div>
+                <div class="t-card-2"></div>
+                <div class="t-card-3"></div>
+                <div class="t-card-4"></div>
+                <div class="t-card-5"></div>
+                <div class="t-card-6"></div>
+                <div class="t-card-7"></div>
             </div>
         </div>
     </section>

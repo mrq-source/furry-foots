@@ -101,6 +101,7 @@ nav i {
     background: none;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 
     z-index: 110;
 }
@@ -338,7 +339,7 @@ button a {
     width: 100dvw;
     height: 100dvh;
 
-    background: #25d366;
+    background-color: #25d366;
     position:relative;
 }
 
@@ -346,9 +347,11 @@ button a {
     position:absolute;
     transform: rotate(-90deg);
     align-self: center;
-    top: 19rem;
+    top: 17.5rem;
     left: -7rem;
     font-size: 35PX;
+    font-family: "Irish Grover";
+    color: #e3f2fd;
 }
 .s-img{
     width: 900px;
@@ -356,119 +359,137 @@ button a {
     position: absolute;
     align-self: center;
     justify-self: center;
-    top: 5rem;
+    top: 4.7rem;
 }
 /* Core Bento Grid Setup */
 .bento-container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 3 equal sections of 2 columns each */
-  grid-template-rows: repeat(4, minmax(110px, auto)); /* 4 equal row tracks */
-  gap: 16px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  height: 400px;
-  color: #023047;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 3 equal sections of 2 columns each */
+    grid-template-rows: repeat(4, minmax(110px, auto)); /* 4 equal row tracks */
+    gap: 16px;
+    max-width: 1000px;
+    height: 350px;
+    color: #023047;
+    position: absolute;
+    top: 10px;
+    width: 1000px;
 }
 
-/* Base Card Styles mimicking the image aesthetics */
 .bento-card {
-  background: linear-gradient(to bottom, #e3f2fd, #ffffff);
-  border: 1px solid #b3e5fc;
-  border-radius: 16px; /* Smooth rounded corners as pictured */
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* Pushes text down like the landscape graphics */
-  min-height: 100px;
+    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+    border: 1px solid #b3e5fc;
+    border-radius: 16px; /* Smooth rounded corners as pictured */
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes text down like the landscape graphics */
+    min-height: 100px;
 }
 
 /* --- Left Column Configurations --- */
 .card-1 {
-  grid-column:span 2;
-  grid-row:  1;
-  background-image: url(PETSHOP/edited-photo\ \(10\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
+    grid-column:span 2;
+    grid-row:  1;
+    background-image: url(PETSHOP/edited-photo\ \(10\).png);
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
-.card-4 {
-  grid-column: span 1;
-  grid-row: span 2;
-  background-image: url(PETSHOP/edited-photo\ \(15\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-}
-.card-5 {
-  grid-column: span 1;
-  grid-row: span 1;
-  background-image: url(PETSHOP/edited-photo\ \(15\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-}
-.card-6 {
-  grid-column: span 1;
-  grid-row: span 1;
-  background-image: url(PETSHOP/edited-photo\ \(15\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
-}
-
-/* --- Middle Column Configurations --- */
 .card-2 {
-  grid-column: span 2;
-  grid-row: span 2;
-  background-image: url(PETSHOP/edited-photo\ \(15\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
+    grid-column: span 2;
+    grid-row: span 2;
+    background-image: url(PETSHOP/edited-photo\ \(16\).png);
+    background-size: 118%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .bento-container .card-3 {
-  grid-column: span 2;
-  grid-row: 2;
-  background-image: url(PETSHOP/edited-photo\ \(14\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
+    grid-column: span 2;
+    grid-row: 2;
+    background-image: url(PETSHOP/edited-photo\ \(14\).png);
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
+
+}
+.card-4 {
+    grid-column: span 1;
+    grid-row: span 2;
+    background-image: url(PETSHOP/edited-photo\ \(15\).png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
+}
+.card-5 {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-image: url(PETSHOP/edited-photo\ \(12\).png);
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
+}
+.card-6 {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-image: url(PETSHOP/edited-photo\ \(13\).png);
+    background-size: 105%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .card-7 {
-  grid-column: span 3;
-  grid-row: span 2;
-  background-image: url(PETSHOP/edited-photo\ \(16\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
+    grid-column: span 4;
+    grid-row: span 2;
+    background-image: url(PETSHOP/edited-photo\ \(16\).png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
-
-/* --- Right Column Configuration --- */
 .card-8 {
-  grid-column: span 3;
-  grid-row: span 1;
-  background-image: url(PETSHOP/edited-photo\ \(15\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay; 
+    grid-column: span 2;
+    grid-row: span 1;
+    background-image: url(PETSHOP/edited-photo\ \(17\).png);
+    background-size: cover;
+    background-position: 0px -10px;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay; 
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .card-9 {
-  grid-column: span 3;
-  grid-row: span 1;
-  background-image: url(PETSHOP/edited-photo\ \(15\).png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay; 
+    grid-column: span 2;
+    grid-row: span 1;
+    background-image: url(PETSHOP/edited-photo\ \(18\).png);
+    background-size: 103% ;
+    background-position: -2px -10px;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay; 
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center; 
 }
+.bento-card:hover{
+    transform: scale(1.05);
+}   
 
 /* Responsive Mobile Layout */
 @media (max-width: 768px) {
@@ -482,4 +503,102 @@ button a {
     grid-row: auto !important;
     min-height: 150px;
   }
+}
+
+
+
+.testimonials{
+    background-color: red;
+    width: 100dvw;
+    height: 100dvh;
+}
+.t-text{
+    width: 100%;
+    height: 10rem;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 4rem;
+}
+.marquee-container{
+    width: 100%;
+    height: 22rem;
+    background-color:blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 6rem;
+
+}
+.marquee{
+    width: 100%;
+    height: 22rem;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: scroll-left 10s linear infinite;
+    gap: 16px;
+}
+.t-card-1{
+    width:16rem;
+    height: 20rem;
+    border-radius: 10px;
+    background-color: #25d366;
+}
+.t-card-2{
+    width:16rem;
+    height: 20rem;
+    border-radius: 10px;
+    background-color: #25d366;
+}
+.t-card-3{
+    width:16rem;
+    height: 20rem;
+    border-radius: 10px;
+    background-color: #25d366;
+}
+.t-card-4{
+    width:16rem;
+    height: 20rem;
+    border-radius: 10px;
+    background-color: #25d366;
+}
+.t-card-5{
+    width:16rem;
+    height: 20rem;
+    border-radius: 10px;
+    background-color: #25d366;
+}
+.t-card-6{
+    width:16rem;
+    height: 20rem;
+    border-radius: 10px;
+    background-color: #25d366;
+}.t-card-7{
+    width:16rem;
+    height: 20rem;
+    border-radius: 10px;
+    background-color: #25d366;
+}
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}   
+.marquee-container:hover .marquee {
+	animation-play-state: paused ;
+}
+#t-img-1{
+    height: 60%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    background-image: url(PETSHOP/img-4.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
