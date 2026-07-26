@@ -5,7 +5,7 @@ const sidebar = document.querySelector('.sidebar');
         sidebar.classList.toggle('active');
     });
 const testimonials = [
-    { name: "Ritika Shah", pet: "Owner of Bruno, Golden Retriever", img: "PETSHOP/img-4.jpeg",
+    { name: "Ritika Shah", img: "PETSHOP/img-4.jpeg",
       review: "Bruno used to shake the entire drive to the groomer. Now he practically drags me through the Furry Foots door. The staff learned his quirks in one visit and the boarding updates they send are the only reason I can travel without guilt." },
     { name: "Aman Kapoor", pet: "Owner of Miso, Shih Tzu", img: "PETSHOP/img-4.jpeg",
       review: "Miso has skin allergies that most groomers get nervous about. The team here actually asked for his vet notes before the first appointment, which no one else has ever done." },
@@ -28,7 +28,6 @@ function tCardHTML(t, idx) {
             <img class="t-pic" src="${t.img}" alt="${t.name}'s pet" data-full="${t.img}">
             <div>
                 <div class="t-name">${t.name}</div>
-                <div class="t-pet">${t.pet}</div>
             </div>
         </div>
         <p class="t-review">${t.review}</p>
@@ -82,7 +81,6 @@ if (track) {
             document.getElementById('modalImg').src = t.img;
             document.getElementById('modalImg').alt = t.name;
             document.getElementById('modalName').textContent = t.name;
-            document.getElementById('modalPet').textContent = t.pet;
             document.getElementById('modalReview').textContent = t.review;
             openOverlay(cardModal);
         }
