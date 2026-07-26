@@ -129,33 +129,35 @@
             </div>
         </div>
     </section>
-    <section class="testimonials" id="testimonials">
-        <div class="t-text">
-            <h1>Testimonials</h1>
+    <section id="testimonials" class="testimonials-section">
+        <div class="testimonials-head">
+            <h2>Testimonials
+                <svg viewBox="0 0 150 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 10c20-12 30 6 50-4s30 6 50-4 30 6 46-2" stroke="#FF8A5B" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </h2>
+            <p>Real words from real pet parents who trust us with their best friends.</p>
         </div>
-        <div class="marquee-container">
-            <div class="marquee">
-                <div class="t-card-1">
-                    <div id="t-img-1"></div>
-                    <div id="t-text-1">
-                        <h3>Namya Gala</h3>
-                        <h5>
-                            Loved the service by both the brothers.
-                            Loki enjoyed the environment of the studio. its very calm.
-                            Will visit again
-                        </h5>
-                    </div>
-                </div>
-                <div class="t-card-2">
-                    
-                </div>
-                <div class="t-card-3"></div>
-                <div class="t-card-4"></div>
-                <div class="t-card-5"></div>
-                <div class="t-card-6"></div>
-                <div class="t-card-7"></div>
-            </div>
+        <div class="marquee-viewport">
+        <div class="marquee-track" id="marqueeTrack"></div>
         </div>
-    </section>
+</section>
+    <div class="overlay" id="lightbox">
+        <button class="overlay-close" data-close-lightbox>&times;</button>
+        <img id="lightboxImg" src="" alt="">
+    </div>
+ 
+<!-- full testimonial modal -->
+    <div class="overlay" id="cardModal">
+        <button class="overlay-close" data-close-modal>&times;</button>
+        <div class="modal-card">
+            <img class="modal-pic" id="modalImg" src="" alt="">
+            <div class="modal-body">
+            <div class="t-name" id="modalName"></div>
+            <div class="t-pet" id="modalPet"></div>
+            <p class="t-review" id="modalReview"></p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
