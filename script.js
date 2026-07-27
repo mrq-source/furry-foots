@@ -5,18 +5,22 @@ const sidebar = document.querySelector('.sidebar');
         sidebar.classList.toggle('active');
     });
 const testimonials = [
-    { name: "Ritika Shah", img: "PETSHOP/img-4.jpeg",
-      review: "Bruno used to shake the entire drive to the groomer. Now he practically drags me through the Furry Foots door. The staff learned his quirks in one visit and the boarding updates they send are the only reason I can travel without guilt." },
-    { name: "Aman Kapoor", pet: "Owner of Miso, Shih Tzu", img: "PETSHOP/img-4.jpeg",
-      review: "Miso has skin allergies that most groomers get nervous about. The team here actually asked for his vet notes before the first appointment, which no one else has ever done." },
-    { name: "Sneha Patil", pet: "Owner of Coco, Indie", img: "PETSHOP/img-4.jpeg",
-      review: "We adopted Coco off the street and she was terrified of strangers. Six months of patient grooming visits later, she wags her tail the second we turn onto the block. That's not a small thing." },
-    { name: "Devansh Rao", pet: "Owner of Simba, Beagle", img: "PETSHOP/img-4.jpeg",
-      review: "Boarded Simba for a 10-day trip and honestly felt more informed about his day than I do most days when he's home with me — photos, feeding notes, even a note about a new bark he picked up from another dog in the yard." },
-    { name: "Farah Sheikh", pet: "Owner of Luna, Persian Cat", img: "PETSHOP/img-4.jpeg",
-      review: "Not every 'pet' place knows what to do with a cat that hates water. Luna's groomer switched to a waterless routine without me even having to ask twice." },
-    { name: "Kabir Mehta", pet: "Owner of Rocky, Labrador", img: "PETSHOP/img-4.jpeg",
-      review: "Rocky has separation anxiety and I was nervous about boarding him for the first time. The team called me on day one just to say he'd settled in fine. Small gesture, huge relief." },
+    { name: "Namya Gala", img: "PETSHOP/img-4.jpeg",
+      review: "Loved the service by both brothers.Loki enjoyed the environment of the studio. Its very calm.Will visit again" },
+    { name: "Mehul Gosalia", pet: "Owner of Miso, Shih Tzu", img: "PETSHOP/img-4.jpeg",
+      review: "I had a great experience at Furry Foots dog grooming center! The place was very clean and well-maintained, which shows how seriously they take hygiene. My pet Max came back looking and smelling fantastic. The owner was especially helpful and clearly cares about both the pets and the customers. Highly recommended for all pet lovers." },
+    { name: "Neha mangtani", pet: "Owner of Coco, Indie", img: "PETSHOP/img-4.jpeg",
+      review: "Staff is very friendly & service was amazing" },
+    { name: "Rohan Shah", pet: "Owner of Simba, Beagle", img: "PETSHOP/img-4.jpeg",
+      review: "Furry Foots has been amazing! Super sweet and genuine people who really take care of the pets. You can tell they truly care and it makes a huge difference." },
+    { name: "Jaiswal roma", pet: "Owner of Luna, Persian Cat", img: "PETSHOP/img-4.jpeg",
+      review: "The service was very good, the way everything is explained is commendable, my Gucci is very happy" },
+    { name: "Shrushti manwar", pet: "Owner of Rocky, Labrador", img: "PETSHOP/img-4.jpeg",
+      review: "Just took my dog to get groomed. The staff were super friendly. He's usually a little nervous with grooming, but they were so patient and gentle with him.He came out looking and smelling amazing....and clean, fluffy.Really happy with the whole experience. You can tell they genuinely care about the animals. Definitely going back!." },
+    { name: "Aarshik", pet: "Owner of Rocky, Labrador", img: "PETSHOP/img-4.jpeg",
+      review: "Excellent grooming service! The team is professional, caring, and ensures every pet feels comfortable. The owner themself take utmost care and attention to provide a stress free grooming to our fur baby. The studio is spotless and hygienic. Highly recommended!" },
+    { name: "Anjum Khan", pet: "Owner of Rocky, Labrador", img: "PETSHOP/img-4.jpeg",
+      review: "Impressive, great service, the staff handle my babies very nicely" },
 ];
  
 const track = document.getElementById('marqueeTrack');
@@ -103,4 +107,40 @@ if (track) {
             closeOverlay(cardModal);
         }
     });
+}
+
+const petGallery = document.querySelector('.p-img-container');
+ 
+if (petGallery) {
+    petGallery.addEventListener('click', e => {
+        const card = e.target.closest('.p-card');
+        if (!card) return;
+ 
+        const bg = getComputedStyle(card).backgroundImage; // e.g. url("PETSHOP/img-5.jpeg")
+        const match = bg.match(/url\(["']?(.*?)["']?\)/);
+        if (!match) return;
+ 
+        lightboxImg.src = match[1];
+        lightboxImg.alt = "Furry Foots gallery photo";
+        openOverlay(lightbox);
+    });
+}
+
+const lazyTiles = document.querySelectorAll('.p-card[data-bg]');
+ 
+if (lazyTiles.length) {
+    const lazyObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const tile = entry.target;
+                tile.style.backgroundImage = `url(${tile.dataset.bg})`;
+                tile.classList.add('lazy-loaded');
+                observer.unobserve(tile); // only needs to happen once
+            }
+        });
+    }, {
+        rootMargin: '200px' // start loading a bit before it's actually visible
+    });
+ 
+    lazyTiles.forEach(tile => lazyObserver.observe(tile));
 }

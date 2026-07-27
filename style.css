@@ -17,6 +17,7 @@ html {
     --nav-height: 12dvh;
 }
 
+
 body {
     background: white;
     color: #fff;
@@ -106,9 +107,34 @@ nav i {
 
     z-index: 110;
 }
+.fa-bars{
+    height: 30px;
+    align-self: center;
+
+}
 .hamburger:hover{
     background-color: #beeef1;
     border-radius: 10px;
+}
+
+/* floating-button */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+
+    background: red;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* =========================
@@ -583,11 +609,11 @@ button a {
 .t-card {
     position: relative;
     flex: 0 0 17rem;
-    background: #fff;
+    background: #b3e5fc;
     color: var(--navy);
     border-radius: 14px;
     padding: 20px 20px 22px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: none;
 }
 
 .t-card-top {
@@ -616,7 +642,7 @@ button a {
 .t-name {
     font-family: "Fruktur", cursive;
     font-size: 17px;
-    color: var(--teal);
+    color: black;
 }
 
 
@@ -788,40 +814,44 @@ button a {
     position: relative;
     width: 100dvw;
     height: 100dvh;
-    background-color: hotpink;
+    background-color:#fefae0;
 }
 .p-text{
     position:absolute;
     transform: rotate(90deg);
     align-self: center;
-    top: 20rem;
+    top: 14rem;
     right: -7rem;
     font-size: 30px;
+    font-family: "Bagel Fat One", "Moo Lah Lah";
+    color:#23404A;
 }
 .p-img-container{
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 3 equal sections of 2 columns each */
     grid-template-rows: repeat(5, minmax(110px, auto)); /* 4 equal row tracks */
-    gap: 10px;
-    max-width: 1500px;  
-    height: fit-content;
+    gap: -10px;
+    row-gap: -10px;
+    column-gap: -10px;
+    max-width: 1100px;  
+    height: 80px;
     position: absolute;
     justify-self: center;
     width: 1000px;
-    top: 2rem;
+    top: 0rem;
     right: 10rem;
-    background-color: #023047;
+
 }
 .p-card {
     background: linear-gradient(to bottom, #e3f2fd, #ffffff);
     border: 1px solid #b3e5fc;
     border-radius: 16px; /* Smooth rounded corners as pictured */
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Pushes text down like the landscape graphics */
     width: 150px;
-    height: 100px;
+    height: 90px;
 }
 .p-img-1{
     grid-column: span 1;
@@ -830,14 +860,18 @@ button a {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-2{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-2.jpeg);
-    background-position: top;
+    background-position: center -30px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-3{
     grid-column: span 1;
@@ -846,6 +880,8 @@ button a {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-4{
     grid-column: span 1;
@@ -854,166 +890,208 @@ button a {
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-5{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-5.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-6{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-6.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-7{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-7.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-8{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-8.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-9{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-9.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-10{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-10.jpeg);
-    background-position: top;
+    background-position: center -75px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-11{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-11.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-12{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-12.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-13{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-13.jpeg);
-    background-position: top;
+    background-position: center -65px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-14{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-14.jpeg);
-    background-position: top;
+    background-position: center -30px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-15{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-15.jpeg);
-    background-position: top;
+    background-position: center -40px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-16{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-16.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-17{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-17.jpeg);
-    background-position: top;
+    background-position: center -30px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-18{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-18.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-19{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-19.jpeg);
-    background-position: top;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-20{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-20.jpeg);
-    background-position: top;
+    background-position: center -95px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-21{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-21.jpeg);
-    background-position: top;
+    background-position: center -50px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-22{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-22.jpeg);
-    background-position: top;
+    background-position: 0 ;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-23{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-23.jpeg);
-    background-position: top;
+    background-position: 0 -30px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-24{
     grid-column: span 1;
     grid-row: span 1;
     background-image:url(PETSHOP/img-24.jpeg);
-    background-position: center;
-    background-size: 95%;
+    background-position: center -60px;
+    background-size: 95%;   
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-25{
     grid-column: span 1;
@@ -1022,6 +1100,8 @@ button a {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-26{
     grid-column: span 1;
@@ -1030,6 +1110,8 @@ button a {
     background-position: center -80px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-27{
     grid-column: span 1;
@@ -1038,6 +1120,8 @@ button a {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-28{
     grid-column: span 1;
@@ -1046,6 +1130,8 @@ button a {
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-29{
     grid-column: span 1;
@@ -1054,6 +1140,8 @@ button a {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
 }
 .p-img-30{
     grid-column: span 1;
@@ -1062,4 +1150,41 @@ button a {
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out; 
+    transform-origin: center center;
+}
+.p-card:hover{
+    transform: scale(1.2);
+}
+.contact{
+    width: 100dvw;
+    height: 100dvh;
+    background-color: blueviolet;
+}
+.c-text{
+    width: fit-content;
+    height: 5rem;
+    background-color: darkcyan;
+    display: flex;
+    position: relative;
+    justify-content: left;
+    align-items: center;
+    top: 8rem;
+    left: 7rem;
+    font-size: 30px;
+}
+.c-sub-text{
+    background-color: #ddfaf8;
+    color: #1b7a9e;
+    width: 30rem;
+    position: relative;
+    top: 10rem;
+    left: 7rem;
+}
+h2{
+    padding: 10px;
+}
+span{
+    color: black;
+    font-size: 15px;
 }
