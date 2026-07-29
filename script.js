@@ -144,3 +144,7 @@ if (lazyTiles.length) {
  
     lazyTiles.forEach(tile => lazyObserver.observe(tile));
 }
+const footerYear = document.getElementById('footerYear');
+if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+}
