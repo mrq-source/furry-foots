@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+Ops+One&family=Exile&family=Fredericka+the+Great&family=Fruktur:ital@0;1&family=Irish+Grover&family=Langar&family=Luckiest+Guy&family=Margarine&family=Molle:ital@1&family=Moo+Lah+Lah&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Spray+Paint&family=UnifrakturCook:wght@700&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/165c5d48e2.js" crossorigin="anonymous"></script>
@@ -51,19 +51,11 @@
 </a>
  
 
-    <!-- ================= HERO ================= -->
+    <!  -- ================= HERO ================= -->
     <section class="hero" id="hero">
-        <div class="name">
-            <h2>Welcome To</h2>
-            <h1>FURRY FOOTS</h1>
-        </div>
-
-        <div id="img">
-            <img id="img1" src="PETSHOP/edited-photo (3).png" alt="Pet">
-            <img id="img2" src="PETSHOP/edited-photo (4).png" alt="Pet Grooming">
-            <img id="img3" src="PETSHOP/edited-photo (5).png" alt="Pet">
-            <img id="img4" src="PETSHOP/edited-photo (6).png" alt="Pet">
-            <img id="img5" src="PETSHOP/edited-photo (7).png" alt="Pet">
+        <div class="hero-content">
+            <img class="hero-logo" src="PETSHOP/logo.jpeg" alt="Furry Foots Logo">
+            <h1>Welcome to Furry Foots - Pet Grooming Studio & Academy</h1>
         </div>
     </section>
 
@@ -83,33 +75,16 @@
                     members clean, healthy, and looking their best.
                 </p>
             </div>
-
-            <button id="button1" type="button">
-                <a href="#">
-                    <span class="btn-icon">
-                        <i class="fa-solid fa-location-dot" style="color: red;"></i>
-                    </span>
-                    Location
-                </a>
-            </button>
-
-            <button id="button2" type="button">
-                <a href="#">
-                    <span class="btn-icon">
-                        <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
-                    </span>
-                    WhatsApp
-                </a>
-            </button>
         </div>
     </section>
 
     <!-- ================= SERVICES ================= -->
     <section class="services" id="services">
-        <div class="s-text">
-            <h1>OUR SERVICES</h1>
-        </div>
-            <div class="s-img">
+    <div class="services-heading">
+        <h2>Our Services</h2>
+    </div>
+
+    <div class="s-img">
                 <div class="bento-container">
                     <div class="bento-card card-1">
                     </div>
@@ -131,38 +106,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="testimonials" class="testimonials-section">
-        <div class="testimonials-head">
-            <h2>Testimonials
-                <svg viewBox="0 0 150 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 10c20-12 30 6 50-4s30 6 50-4 30 6 46-2" stroke="#FF8A5B" stroke-width="4" stroke-linecap="round"/>
-                </svg>
-            </h2>
-            <p>Real words from real pet parents who trust us with their best friends.</p>
-        </div>
-        <div class="marquee-viewport">
-        <div class="marquee-track" id="marqueeTrack"></div>
-        </div>
-    </section>
-    <div class="overlay" id="lightbox">
-        <button class="overlay-close" data-close-lightbox>&times;</button>
-        <img id="lightboxImg" src="" alt="">
-    </div>
- 
-<!-- full testimonial modal -->
-    <div class="overlay" id="cardModal">
-        <button class="overlay-close" data-close-modal>&times;</button>
-        <div class="modal-card">
-            <img class="modal-pic" id="modalImg" src="" alt="">
-            <div class="modal-body">
-            <div class="t-name" id="modalName"></div>
-            <p class="t-review" id="modalReview"></p>
-        </div>
-    </div>
-    </div>
-    <section class="pet-room" id="pet-room">
+</section>
+    <section id="pet-room" class="pet-room">
         <div class="p-text">
             <h1>OUR PET'S ROOM</h1>
         </div>
@@ -198,6 +143,34 @@
             <div class="p-card p-img-29"></div>
         </div>
     </section>
+    <section id="testimonials" class="testimonials-section">
+        <div class="testimonials-head">
+            <h2>Testimonials
+                <svg viewBox="0 0 150 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 10c20-12 30 6 50-4s30 6 50-4 30 6 46-2" stroke="#1b7a9e" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </h2>
+            <p>Real words from real pet parents who trust us with their best friends.</p>
+        </div>
+        <div class="marquee-viewport">
+            <div class="marquee-track" id="marqueeTrack"></div>
+        </div>
+    </section>
+    <div class="overlay" id="lightbox">
+        <button class="overlay-close" data-close-lightbox>&times;</button>
+        <img id="lightboxImg" src="" alt="">
+    </div>
+ 
+<!-- full testimonial modal -->
+    <div class="overlay" id="cardModal">
+        <button class="overlay-close" data-close-modal>&times;</button>
+        <div class="modal-card">
+            <div class="modal-body">
+                <div class="t-name" id="modalName"></div>
+                <p class="t-review" id="modalReview"></p>
+            </div>
+        </div>
+    </div>
     <section class="contact" id="contact">
     <div class="c-text">
         <h1>Get In Touch?</h1>
@@ -224,19 +197,19 @@
                     </div>
                 </div>
  
-                <div class="c-row">
+                    <div class="c-row">
                     <i class="fa-solid fa-phone"></i>
                     <div>
                         <span class="c-label">Phone</span>
-                        <a class="c-value c-link" href="tel:+919867884536">91 98678 84536</a>
+                        <a class="c-value c-link" href="tel:+919136930520">+91-91369-30520</a>
                     </div>
                 </div>
  
                 <div class="c-row">
-                    <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
                     <div>
                         <span class="c-label">WhatsApp</span>
-                        <a class="c-value c-link" href="https://wa.me/919867884536" target="_blank" rel="noopener">Chat with us</a>
+                        <a class="c-value c-link" href="https://wa.me/919867884536" target="_blank" rel="noopener">+91 98678 84536</a>
                     </div>
                 </div>
             </h2>

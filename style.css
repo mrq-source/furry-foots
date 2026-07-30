@@ -10,19 +10,21 @@ html {
 }
 
 :root {
-    --nav: #ddfaf8;
+    --nav: #e8fbff;
+    --surface: #ffffff;
+    --text: #023047;
     --teal: #1b7a9e;
-    --navy: #023047;
-    --green: #25d366;
+    --accent: #0f6e81;
+    --light: #f1fbfd;
     --nav-height: 12dvh;
 }
 
 
 body {
-    background: white;
-    color: #fff;
-    font-family: "Space Mono", monospace;
-    height: 100dvh;
+    background: var(--surface);
+    color: var(--text);
+    font-family: "Poppins", sans-serif;
+    min-height: 100dvh;
     overflow-x: hidden;
     user-select: none;
     -webkit-user-select: none;
@@ -32,7 +34,7 @@ body {
 
 section {
     width: 100%;
-    height: 100dvh;
+    min-height: 100dvh;
 }
 
 /* =========================
@@ -51,7 +53,8 @@ nav {
     width: 100dvw;
     height: 12dvh;
 
-    background: var(--nav);
+    background: var(--surface);
+    border-bottom: 1px solid rgba(3, 48, 71, 0.08);
 
     user-select: none;
     -webkit-user-select: none;
@@ -60,25 +63,31 @@ nav {
 }
 
 img {
-    position: absolute;
-    top: -25px;
-
-    width: 10dvw;
-    height: 20vh;
-
+    max-width: 100%;
+    height: auto;
+    display: block;
     -webkit-user-drag: none;
     -khtml-user-drag: none;
     -moz-user-drag: none;
     -o-user-drag: none;
 }
 
-#logo2 {
-    position: absolute;
-    top: 10px;
-    left: 8.6dvw;
+nav .logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
 
-    width: 10vw;
-    height: 10dvh;
+nav .logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+#logo2 {
+    position: static;
+    width: auto;
+    height: auto;
 }
 
 nav i {
@@ -127,7 +136,7 @@ nav i {
     height: 60px;
     border-radius: 50%;
  
-    background: #25d366;
+    background: var(--teal);
     color: #fff;
     font-size: 30px;
  
@@ -204,7 +213,7 @@ nav i {
 }
 
 .sidebar ul li a:hover {
-    color: cornflowerblue;
+    color: #b2f1ff;
 }
 
 /* =========================
@@ -212,104 +221,40 @@ nav i {
 ========================= */
 
 .hero {
-    width: 100%;
-    height: 100dvh;
-
-    color: black;
-
+    width: 100dvw;
+    min-height: 100dvh;
+    background: ;
+    color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
-
-    position: relative;
+    padding-top: var(--nav-height);
 }
 
-.name {
-    position: absolute;
-    top: 2.7em;
-
-    width: 77%;
-    height: 4em;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    font-size: 70px;
-    line-height: 0.8;
-    color: #1b7a9e;
-}
-
-.name h2 {
-    align-self: flex-start;
-    font-family: "Rubik Spray Paint", cursive;
-    font-size: 55px;
-    font-weight: 100;
-}
-
-.name h1 {
-    align-self: center;
-    font-family: "Playfair Display", serif;
-}
-
-#img {
-    position: absolute;
-    bottom: 0;
-
+.hero-content {
+    text-align: center;
     width: 100%;
-    height: 16rem;
+    padding: 2rem;
 }
 
-#img1 {
-    position: absolute;
-    top: -12rem;
-    right: 7rem;
-
-    width: 500px;
-    height: 448px;
-    z-index: 3;
+.hero-logo {
+    width: min(80vw, 80vh, 80%);
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+    margin: 0 auto 1.5rem;
+    display: block;
 }
 
-#img2 {
-    position: absolute;
-    top: -9rem;
-    right: 41em;
-
-    width: 500px;
-    height: 400px;
-
-    transform: scaleX(-1);
-    z-index: 4;
+.hero-content h1 {
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    line-height: 1.05;
+    font-weight: 700;
+    color: var(--teal);
 }
 
-#img3 {
-    position: absolute;
-    top: -9rem;
-    right: 22rem;
-
-    width: 500px;
-    height: 400px;
-    z-index: 5;
-}
-
-#img4 {
-    position: absolute;
-    top: -17rem;
-    right: -7rem;
-
-    width: 500px;
-    height: 528px;
-    z-index: 6;
-}
-
-#img5 {
-    position: absolute;
-    top: -15.2rem;
-    left: -10rem;
-
-    width: 500px;
-    height: 500px;
-    z-index: 7;
+.img {
+    display: none;
 }
 
 /* =========================
@@ -318,30 +263,46 @@ nav i {
 
 .aboutus {
     position: relative;
-
     width: 100dvw;
-    height: 100dvh;
-
-    background: var(--navy);
+    min-height: 100dvh;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--nav-height) + 3rem) 2rem 3rem;
 }
 
 .aboutus .side-pic {
-    position: absolute;
-    top: 120px;
-    left: 80px;
-
-    width: 400px;
-    height: 400px;
+    width: min(460px, 100%);
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(3, 48, 71, 0.12);
 }
 
 #text {
-    position: absolute;
-    top: 90px;
-    left: 45%;
+    position: static;
+    width: min(720px, 100%);
+    max-width: 720px;
+    font-size: 1rem;
+    color: var(--text);
+    margin-left: 2.5rem;
+}
 
-    width: 680px;
+@media (max-width: 980px) {
+    .aboutus {
+        flex-direction: column;
+        padding-top: calc(var(--nav-height) + 2rem);
+    }
 
-    font-size: 30px;
+    .aboutus .side-pic {
+        margin-bottom: 2rem;
+    }
+
+    #text {
+        margin-left: 0;
+        text-align: center;
+    }
 }
 
 #text1 {
@@ -385,37 +346,61 @@ button a {
     color: #25d366;
 }
 
-/* =========================
-   SERVICES
-========================= */
+/* ===========================
+   SERVICES SECTION
+=========================== */
 
-.services {
-    width: 100dvw;
-    height: 100dvh;
+.services{
+    width:100%;
+    min-height:100vh;
 
-    background-color: #fefae0;
-    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:80px 5%;
 }
 
-.s-text{
-    position:absolute;
-    transform: rotate(-90deg);
-    align-self: center;
-    top: 17.5rem;
-    left: -7rem;
-    font-size: 35px;
-    font-family: "Irish Grover";
-    color: #0077b6;
+/* ===========================
+   BENTO GRID
+=========================== */
+
+.bento-container{
+    width:100%;
+    max-width:1200px;
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+    grid-auto-rows:170px;
+
+    gap:18px;
 }
-.s-img{
-    width: 900px;
-    height: 500px;
-    position: absolute;
-    align-self: center;
-    justify-self: center;
-    top: 4.7rem;
+
+/* ===========================
+   CARD DESIGN
+=========================== */
+
+.bento-card{
+
+    border-radius:18px;
+    border-color: #1b7a9e;
+    border:30px;
+
+    overflow:hidden;
+
+
+    transition:.35s;
+    cursor:pointer;
 }
-/* Core Bento Grid Setup */
+.bento-card:hover{
+    transform:scale(1.03);
+}
+
+/* ===========================
+   GRID LAYOUT
+=========================== */
+
 .bento-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr); /* 3 equal sections of 2 columns each */
@@ -424,7 +409,7 @@ button a {
     max-width: 1000px;
     height: 350px;
     color: #023047;
-    position: absolute;
+    position: relative;
     top: 10px;
     width: 1000px;
 }
@@ -543,22 +528,43 @@ button a {
 }
 .bento-card:hover{
     transform: scale(1.05);
-}   
-
-/* Responsive Mobile Layout */
-@media (max-width: 768px) {
-  .bento-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  
-  .bento-card {
-    grid-column: auto !important;
-    grid-row: auto !important;
-    min-height: 150px;
-  }
 }
 
+
+/* ===========================
+   IMAGES
+=========================== */
+
+.card-1{background-image:url("PETSHOP/edited-photo (10).png");}
+.card-2{background-image:url("PETSHOP/edited-photo (16).png");}
+.card-3{background-image:url("PETSHOP/edited-photo (14).png");}
+.card-4{background-image:url("PETSHOP/edited-photo (15).png");}
+.card-5{background-image:url("PETSHOP/edited-photo (12).png");}
+.card-6{background-image:url("PETSHOP/edited-photo (13).png");}
+.card-7{background-image:url("PETSHOP/edited-photo (11).png");}
+.card-8{background-image:url("PETSHOP/edited-photo (17).png");}
+.card-9{background-image:url("PETSHOP/edited-photo (18).png");}
+@media (max-width:992px){
+.bento-container{
+    grid-template-columns:repeat(2,1fr);
+    grid-auto-rows:220px;
+}
+.bento-card{
+    grid-column:auto !important;
+    grid-row:auto !important;
+}
+}
+@media (max-width:768px){
+.services{
+    padding:60px 20px;
+}
+.bento-container{
+    grid-template-columns:1fr;
+}
+.bento-card{
+    min-height:250px;
+}
+}
 
 /* =========================
    TESTIMONIALS
@@ -568,7 +574,7 @@ button a {
     position: relative;
     width: 100dvw;
     height: auto;
-    background-color: #fefae0;
+    background-color: white;
     min-height: 100dvh;
     padding: calc(var(--nav-height) + 3rem) 0 4rem;
     overflow: hidden;
@@ -584,11 +590,11 @@ button a {
 }
 
 .testimonials-head h2 {
-    font-family: "Luckiest Guy", cursive;
-    font-weight: 400;
-    font-size: clamp(34px, 5vw, 50px);
-    color: #c1121f;
-    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--teal);
+    letter-spacing: 0.5px;
     position: relative;
     display: inline-block;
 }
@@ -604,9 +610,9 @@ button a {
 
 .testimonials-head p {
     margin: 20px 0 0;
-    color: black;
-    font-size: 14px;
-    line-height: 1.6;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.75;
 }
 
 /* ---- marquee ---- */
@@ -637,47 +643,40 @@ button a {
 .t-card {
     position: relative;
     flex: 0 0 17rem;
-    background: #b3e5fc;
-    color: var(--navy);
-    border-radius: 14px;
-    padding: 20px 20px 22px;
-    box-shadow: none;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid rgba(27, 122, 158, 0.18);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(3, 48, 71, 0.06);
 }
 
 .t-card-top {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
-    margin-bottom: 14px;
-}
-
-.t-pic {
-    position: static;
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: zoom-in;
-    border: 2px solid var(--teal);
-    transition: transform 0.15s ease, border-color 0.15s ease;
-}
-
-.t-pic:hover {
-    transform: scale(1.06);
-    border-color: var(--green);
+    margin-bottom: 16px;
 }
 
 .t-name {
-    font-family: "Fruktur", cursive;
-    font-size: 17px;
-    color: black;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--teal);
+}
+
+.t-pet {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.875rem;
+    color: rgba(3, 48, 71, 0.8);
+    margin-top: 4px;
 }
 
 
 .t-review {
-    font-size: 13px;
-    line-height: 1.6;
-    color: var(--navy);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: rgba(3, 48, 71, 0.95);
     display: -webkit-box;
     -webkit-line-clamp: 4;
     line-clamp: inherit;
@@ -688,13 +687,13 @@ button a {
 
 .t-more {
     display: none;
-    margin-top: 10px;
-    background: #e3f2fd;
+    margin-top: 12px;
+    background: var(--light);
     color: var(--teal);
-    border: none;
-    border-radius: 20px;
+    border: 1px solid rgba(27, 122, 158, 0.25);
+    border-radius: 999px;
     width: 36px;
-    height: 22px;
+    height: 26px;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -840,46 +839,50 @@ button a {
 
 .pet-room{
     position: relative;
-    width: 100dvw;
-    height: 100dvh;
-    background-color:#fefae0;
+    width: 100%;
+    min-height: 100dvh;
+    background-color: var(--surface);
+    padding: calc(var(--nav-height) + 3rem) 1.5rem 4rem;
 }
 .p-text{
-    position:absolute;
-    transform: rotate(90deg);
-    align-self: center;
-    top: 14rem;
-    right: -7rem;
-    font-size: 30px;
-    font-family: "Bagel Fat One", "Moo Lah Lah";
-    color:#23404A;
+    position: static;
+    transform: none;
+    text-align: center;
+    margin: 0 auto 2rem;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-family: "Bagel Fat One", "Moo Lah Lah", sans-serif;
+    color: #23404A;
 }
 .p-img-container{
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 3 equal sections of 2 columns each */
-    grid-template-rows: repeat(5, minmax(110px, auto)); /* 4 equal row tracks */
-    gap: -10px;
-    row-gap: -10px;
-    column-gap: -10px;
-    max-width: 1100px;  
-    height: 80px;
-    position: absolute;
-    justify-self: center;
-    width: 1000px;
-    top: 0rem;
-    right: 10rem;
-
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-auto-rows: 160px;
+    gap: 12px;
+    max-width: 1100px;
+    width: min(100%, 1100px);
+    margin: 0 auto;
+    position: static;
+    top: auto;
+    right: auto;
+    height: auto;
 }
 .p-card {
-    background: linear-gradient(to bottom, #e3f2fd, #ffffff);
-    border: 1px solid #b3e5fc;
-    border-radius: 16px; /* Smooth rounded corners as pictured */
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Pushes text down like the landscape graphics */
-    width: 150px;
-    height: 90px;
+    background: linear-gradient(to bottom, #f7fdff, #ffffff);
+    border: 1px solid rgba(27, 122, 158, 0.18);
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.p-card::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.p-card:hover {
+    transform: scale(1.03);
 }
 .p-img-1{
     grid-column: span 1;
@@ -1308,6 +1311,78 @@ button a {
     .c-img {
         width: 100%;
         min-height: 240px;
+    }
+}
+
+@media (max-width: 980px) {
+    .services {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .s-text {
+        position: static;
+        transform: none;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        left: auto;
+        top: auto;
+    }
+    .s-img {
+        padding-top: 0;
+    }
+    .bento-container {
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+        grid-auto-rows: minmax(180px, auto);
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero {
+        padding-top: calc(var(--nav-height) + 1rem);
+    }
+    .hero-content {
+        padding: 1rem;
+    }
+    .hero-content h1 {
+        font-size: clamp(1.9rem, 8vw, 2.8rem);
+    }
+    .bento-container {
+        grid-template-columns: 1fr;
+    }
+    .s-text {
+        font-size: 2rem;
+    }
+    .p-img-container {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    .pet-room {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .p-text {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 520px) {
+    nav {
+        height: auto;
+        padding: 0.75rem 1rem;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-logo {
+        width: min(90vw, 80vh, 90%);
+    }
+    .bento-card::before,
+    .p-card::before {
+        padding-top: 100%;
+    }
+    .p-img-container {
+        grid-template-columns: 1fr;
     }
 }
 .location {

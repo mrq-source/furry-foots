@@ -29,9 +29,9 @@ function tCardHTML(t, idx) {
     return `
     <article class="t-card" data-idx="${idx}">
         <div class="t-card-top">
-            <img class="t-pic" src="${t.img}" alt="${t.name}'s pet" data-full="${t.img}">
             <div>
                 <div class="t-name">${t.name}</div>
+                ${t.pet ? `<div class="t-pet">${t.pet}</div>` : ''}
             </div>
         </div>
         <p class="t-review">${t.review}</p>
@@ -43,8 +43,8 @@ if (track) {
     // render twice back-to-back for a seamless loop
     track.innerHTML = testimonials.map(tCardHTML).join('') + testimonials.map(tCardHTML).join('');
  
-    // scale marquee speed to content amount so pace stays consistent
-    track.style.setProperty('--marquee-duration', `${testimonials.length * 7}s`);
+    // speed the testimonial marquee up a bit
+    track.style.setProperty('--marquee-duration', `${Math.max(20, testimonials.length * 4)}s`);
  
     // show the ••• button only where the review text is actually clipped
     function checkTestimonialOverflow() {
@@ -71,23 +71,14 @@ if (track) {
     }
  
     track.addEventListener('click', e => {
-        const pic = e.target.closest('.t-pic');
-        if (pic) {
-            lightboxImg.src = pic.dataset.full;
-            lightboxImg.alt = pic.alt;
-            openOverlay(lightbox);
-            return;
-        }
         const btn = e.target.closest('.t-more');
-        if (btn) {
-            const idx = btn.closest('.t-card').dataset.idx % testimonials.length;
-            const t = testimonials[idx];
-            document.getElementById('modalImg').src = t.img;
-            document.getElementById('modalImg').alt = t.name;
-            document.getElementById('modalName').textContent = t.name;
-            document.getElementById('modalReview').textContent = t.review;
-            openOverlay(cardModal);
-        }
+        if (!btn) return;
+
+        const idx = btn.closest('.t-card').dataset.idx % testimonials.length;
+        const t = testimonials[idx];
+        document.getElementById('modalName').textContent = t.name;
+        document.getElementById('modalReview').textContent = t.review;
+        openOverlay(cardModal);
     });
  
     document.querySelectorAll('[data-close-lightbox]').forEach(b =>
