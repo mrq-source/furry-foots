@@ -122,21 +122,46 @@ nav i {
     position: fixed;
     bottom: 20px;
     right: 20px;
-
+ 
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: none;
-
-    background: red;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 9999;
+ 
+    background: #25d366;
+    color: #fff;
+    font-size: 30px;
+ 
+    display: flex;
     align-items: center;
     justify-content: center;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+ 
+    cursor: pointer;
+    z-index: 9999;
+ 
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.5);
+    animation: pulseBtn 2.4s ease-in-out infinite;
+    transition: transform 0.15s ease;
+}
+ 
+.floating-btn:hover {
+    transform: scale(1.08);
+    animation-play-state: paused;
+}
+ 
+@keyframes pulseBtn {
+    0%, 100% {
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.5);
+    }
+    50% {
+        box-shadow: 0 4px 14px rgba(37, 211, 102, 0.5), 0 0 0 10px rgba(37, 211, 102, 0.15);
+    }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+    .floating-btn {
+        animation: none;
+    }
 }
 
 /* =========================
@@ -466,7 +491,7 @@ button a {
     grid-row: span 1;
     background-image: url(PETSHOP/edited-photo\ \(12\).png);
     background-size: 105%;
-    background-position: center;
+    background-position: center -10px;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     transition: transform 0.3s ease-in-out; 
@@ -477,18 +502,18 @@ button a {
     grid-row: span 1;
     background-image: url(PETSHOP/edited-photo\ \(13\).png);
     background-size: 105%;
-    background-position: top;
+    background-position: center -10px;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     transition: transform 0.3s ease-in-out; 
     transform-origin: center center;
 }
 .card-7 {
-    grid-column: span 4;
+    grid-column: span 3;
     grid-row: span 2;
-    background-image: url(PETSHOP/edited-photo\ \(16\).png);
-    background-size: cover;
-    background-position: center;
+    background-image: url(PETSHOP/ChatGPT\ Image\ Jul\ 24\,\ 2026\,\ 06_07_55\ PM.png);
+    background-size: 105%;
+    background-position: center -20px;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     transition: transform 0.3s ease-in-out; 
@@ -498,8 +523,8 @@ button a {
     grid-column: span 2;
     grid-row: span 1;
     background-image: url(PETSHOP/edited-photo\ \(17\).png);
-    background-size: cover;
-    background-position: 0px -10px;
+    background-size: 105%;
+    background-position: center -10px;
     background-repeat: no-repeat;
     background-blend-mode: overlay; 
     transition: transform 0.3s ease-in-out; 
@@ -509,8 +534,8 @@ button a {
     grid-column: span 2;
     grid-row: span 1;
     background-image: url(PETSHOP/edited-photo\ \(18\).png);
-    background-size: 103% ;
-    background-position: -2px -10px;
+    background-size: 105% ;
+    background-position: center -15px;
     background-repeat: no-repeat;
     background-blend-mode: overlay; 
     transition: transform 0.3s ease-in-out; 
