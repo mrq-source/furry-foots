@@ -100,22 +100,22 @@ if (track) {
     });
 }
 
-const petGallery = document.querySelector('.p-img-container');
- 
-if (petGallery) {
-    petGallery.addEventListener('click', e => {
-        const card = e.target.closest('.p-card');
-        if (!card) return;
- 
-        const bg = getComputedStyle(card).backgroundImage; // e.g. url("PETSHOP/img-5.jpeg")
-        const match = bg.match(/url\(["']?(.*?)["']?\)/);
-        if (!match) return;
- 
-        lightboxImg.src = match[1];
-        lightboxImg.alt = "Furry Foots gallery photo";
-        openOverlay(lightbox);
-    });
-}
+    const petGallery = document.querySelector('.p-img-container');
+    
+    if (petGallery) {
+        petGallery.addEventListener('click', e => {
+            const card = e.target.closest('.p-card');
+            if (!card) return;
+    
+            const bg = getComputedStyle(card).backgroundImage; // e.g. url("PETSHOP/img-5.jpeg")
+            const match = bg.match(/url\(["']?(.*?)["']?\)/);
+            if (!match) return;
+    
+            lightboxImg.src = match[1];
+            lightboxImg.alt = "Furry Foots gallery photo";
+            openOverlay(lightbox);
+        });
+    }
 
 const lazyTiles = document.querySelectorAll('.p-card[data-bg]');
  
