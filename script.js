@@ -139,3 +139,23 @@ const footerYear = document.getElementById('footerYear');
 if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('petImgContainer');
+  const prevBtn = document.querySelector('.p-scroll-prev');
+  const nextBtn = document.querySelector('.p-scroll-next');
+
+  const scrollAmount = () => {
+    const card = container.querySelector('.p-card');
+    const cardWidth = card ? card.getBoundingClientRect().width : 170;
+    const gap = parseFloat(getComputedStyle(container).columnGap || getComputedStyle(container).gap) || 12;
+    return (cardWidth + gap) * 2; // scroll ~2 cards per click, tweak as you like
+  };
+
+  prevBtn.addEventListener('click', () => {
+    container.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    container.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+  });
+});

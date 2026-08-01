@@ -48,7 +48,7 @@
     </nav>
     <a class="floating-btn" href="https://wa.me/919867884536" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
-</a>
+    </a>
  
 
     <!-- ================= HERO ================= -->
@@ -62,7 +62,7 @@
     <!-- ================= ABOUT ================= -->
     <section class="about-us" id="about-us">
         <div class="aboutus">
-            <img class="side-pic" src="PETSHOP/side-pic.jpeg" alt="Pet Grooming">
+            <img class="side-pic" src="PETSHOP/img-1.jpeg" alt="Pet Grooming">
 
             <div id="text">
                 <h2 id="text1">About Us</h2>
@@ -80,28 +80,103 @@
 
     <!-- ================= SERVICES ================= -->
     <section class="services" id="services">
-    <div class="services-heading">
-        <h2>Our Services</h2>
-    </div>
-
-    <div class="s-img">
-        <div class="bento-container">
-            <div class="bento-card card-1"></div>
-            <div class="bento-card card-2"></div>
-            <div class="bento-card card-3"></div>
-            <div class="bento-card card-4"></div>
-            <div class="bento-card card-5"></div>
-            <div class="bento-card card-6"></div>
-            <div class="bento-card card-7"></div>
-            <div class="bento-card card-8"></div>
+  <div class="services__inner">
+    <h2 class="services__heading">OUR SERVICES</h2>
+ 
+    <div class="services__grid">
+ 
+      <article class="service">
+        <div class="service__image">
+          <img src="PETSHOP/cover-1.png" alt="Spa bath and fluff dry">
         </div>
+        <div class="service__text">
+          <h3 class="service__title">Spa Bath &amp; Fluff Dry</h3>
+          <p class="service__desc">A gentle spa bath followed by a soft, fluffy blow-dry finish.</p>
+        </div>
+      </article>
+ 
+      <article class="service">
+        <div class="service__image">
+          <img src="PETSHOP/cover-2.png" alt="Medicated bath">
+        </div>
+        <div class="service__text">
+          <h3 class="service__title">Medicated Bath</h3>
+          <p class="service__desc">Specialised bath treatment for skin conditions and allergies.</p>
+        </div>
+      </article>
+ 
+      <article class="service">
+        <div class="service__image">
+          <img src="PETSHOP/cover-3.png" alt="Tick and flea treatment">
+        </div>
+        <div class="service__text">
+          <h3 class="service__title">Tick &amp; Flea Treatment</h3>
+          <p class="service__desc">Thorough treatment to keep your pet tick and flea free.</p>
+        </div>
+      </article>
+ 
+      <article class="service">
+        <div class="service__image">
+          <img src="PETSHOP/cover-4.png" alt="Nail trim and file">
+        </div>
+        <div class="service__text">
+          <h3 class="service__title">Nail Trim &amp; File</h3>
+          <p class="service__desc">Safe nail trimming and filing for comfortable paws.</p>
+        </div>
+      </article>
+ 
+      <article class="service">
+        <div class="service__image">
+          <img src="PETSHOP/cover-5.png" alt="Breed specific haircuts">
+        </div>
+        <div class="service__text">
+          <h3 class="service__title">Breed Specific Haircuts</h3>
+          <p class="service__desc">Haircuts styled to suit your pet's breed standard.</p>
+        </div>
+      </article>
+ 
+      <article class="service">
+        <div class="service__image">
+          <img src="PETSHOP/cover-6.png" alt="Under paws and sanitary trim">
+        </div>
+        <div class="service__text">
+          <h3 class="service__title">Under Paws &amp; Sanitary Trim</h3>
+          <p class="service__desc">Trimming of paw pads and sanitary areas for hygiene and comfort.</p>
+        </div>
+      </article>
+ 
+      <article class="service">
+        <div class="service__image">
+          <img src="PETSHOP/cover-7.png" alt="Ear cleaning">
+        </div>
+        <div class="service__text">
+          <h3 class="service__title">Ear Cleaning</h3>
+          <p class="service__desc">Gentle cleaning to keep ears healthy and infection-free.</p>
+        </div>
+      </article>
+ 
+      <article class="service">
+        <div class="service__image">
+          <img src="PETSHOP/cover-8.png" alt="Luxury cologne spray">
+        </div>
+        <div class="service__text">
+          <h3 class="service__title">Luxury Cologne Spray</h3>
+          <p class="service__desc">A light, pet-safe fragrance finish after grooming.</p>
+        </div>
+      </article>
+ 
     </div>
+  </div>
 </section>
     <section id="pet-room" class="pet-room">
-        <div class="p-text">
-            <h1>OUR PET'S ROOM</h1>
-        </div>
-        <div class="p-img-container">
+    <div class="p-text">
+        <h1>OUR PET'S ROOM</h1>
+    </div>
+
+    <div class="p-scroller-wrap">
+        <button class="p-scroll-btn p-scroll-prev" aria-label="Scroll left">&#10094;</button>
+
+        <div class="p-img-container" id="petImgContainer">
             <div class="p-card p-img-1"></div>
             <div class="p-card p-img-2"></div>
             <div class="p-card p-img-3"></div>
@@ -132,6 +207,9 @@
             <div class="p-card p-img-28"></div>
             <div class="p-card p-img-29"></div>
         </div>
+
+        <button class="p-scroll-btn p-scroll-next" aria-label="Scroll right">&#10095;</button>
+    </div>
     </section>
     <section id="testimonials" class="testimonials-section">
         <div class="testimonials-head">
@@ -207,7 +285,7 @@
  
         <div class="c-img"></div>
     </div>
-</section>
+    </section>
 <!-- <section class="location" id="location">
     <div class="l-text">
         <h1>Find Us Here</h1>
