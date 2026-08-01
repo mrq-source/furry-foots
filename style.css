@@ -698,13 +698,6 @@ button a {
     color: var(--teal);
 }
 
-.t-pet {
-    font-family: "Poppins", sans-serif;
-    font-size: 0.875rem;
-    color: rgba(3, 48, 71, 0.8);
-    margin-top: 4px;
-}
-
 
 .t-review {
     font-size: 0.95rem;
@@ -994,7 +987,7 @@ button a {
 .p-scroll-next { right: -4px; }
  
 @media (max-width: 640px) {
-    .pet-room{ height: 70dvh;}
+    .pet-room{ height: 80dvh;}
     .p-scroller-wrap { padding: 0 1rem; }
 
     .p-scroll-btn {
