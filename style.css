@@ -994,7 +994,7 @@ button a {
 .p-scroll-next { right: -4px; }
  
 @media (max-width: 640px) {
-    .pet-room{ height: 60dvh;}
+    .pet-room{ height: 70dvh;}
     .p-scroller-wrap { padding: 0 1rem; }
 
     .p-scroll-btn {
