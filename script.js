@@ -117,24 +117,6 @@ if (track) {
         });
     }
 
-const lazyTiles = document.querySelectorAll('.p-card[data-bg]');
- 
-if (lazyTiles.length) {
-    const lazyObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const tile = entry.target;
-                tile.style.backgroundImage = `url(${tile.dataset.bg})`;
-                tile.classList.add('lazy-loaded');
-                observer.unobserve(tile); // only needs to happen once
-            }
-        });
-    }, {
-        rootMargin: '200px' // start loading a bit before it's actually visible
-    });
- 
-    lazyTiles.forEach(tile => lazyObserver.observe(tile));
-}
 const footerYear = document.getElementById('footerYear');
 if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
