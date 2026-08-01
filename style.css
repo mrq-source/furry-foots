@@ -884,8 +884,7 @@ button a {
 .pet-room{
     position: relative;
     width: 100%;
-    height: 100dvh;
-    min-height: 80dvh;
+    height: clamp(40dvh, 100dvh, 100dvh);
     background-color: var(--surface);
     padding: calc(var(--nav-height) + 3rem) 0 4rem;
 }
@@ -995,6 +994,7 @@ button a {
 .p-scroll-next { right: -4px; }
  
 @media (max-width: 640px) {
+    .pet-room{ height: 60dvh;}
     .p-scroller-wrap { padding: 0 1rem; }
 
     .p-scroll-btn {
