@@ -1161,7 +1161,7 @@ button a {
     border-radius: 18px;
     background-image: url(PETSHOP/img-2.jpeg);
     background-size: cover;
-    background-position: center;
+    background-position: center -70px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
  
@@ -1179,6 +1179,7 @@ button a {
     .c-img {
         width: 100%;
         min-height: 240px;
+        background-position: center -100px;
     }
 }
 
@@ -1194,6 +1195,7 @@ button a {
     }
     .c-img {
         min-height: 460px;
+        background-position: center -200px;
     }
 }
 
