@@ -1006,6 +1006,7 @@ button a {
 @media (max-width: 640px) {
     .pet-room{ height: 80dvh;}
     .p-scroller-wrap { padding: 0 1rem; }
+    .p-text{ font-size: 10px;}
 
     .p-scroll-btn {
         width: 34px;
@@ -1040,7 +1041,7 @@ button a {
    any time you add a photo — no other layout code needs to change.
 ========================= */
  
-.p-img-1{ background-image:url(PETSHOP/img-1.jpeg); background-position: top; background-size: cover; background-repeat: no-repeat; }
+.p-img-1{ background-image:url(PETSHOP/img-30.jpeg); background-position: top; background-size: cover; background-repeat: no-repeat; }
 .p-img-2{ background-image:url(PETSHOP/img-2.jpeg); background-position: center -30px; background-size: cover; background-repeat: no-repeat; }
 .p-img-3{ background-image:url(PETSHOP/img-3.jpeg); background-position: top; background-size: cover; background-repeat: no-repeat; }
 .p-img-4{ background-image:url(PETSHOP/img-4.jpeg); background-position: top; background-size: cover; background-repeat: no-repeat; }
