@@ -676,7 +676,7 @@ button a {
     display: flex;
     gap: 24px;
     width: max-content;
-    animation: scroll-left var(--marquee-duration, 30s) linear infinite;
+    animation: scroll-left var(--marquee-duration, 40s) linear infinite;
 }
 
 .marquee-track:hover {
