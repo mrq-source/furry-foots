@@ -496,7 +496,7 @@ button a {
   position: relative;
   display: flex;
   flex-direction: column;
-  background: var(--clr-card);
+  background: linear-gradient(to bottom ,#d3fbfa, whitesmoke, #d3fbfa);
   border-radius: 1.25rem;
   padding: 3.75rem 1.25rem 1.5rem;
   min-height: 15rem;
