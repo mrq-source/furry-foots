@@ -88,6 +88,7 @@ img{
 nav .logo {
     position: relative;
     display: flex;
+    padding-top: 10px;
     align-items: start;
     width: fit-content;
 }
@@ -244,12 +245,12 @@ nav i {
 
 .hero {
     width: 100dvw;
-    min-height: 60dvh;
+    min-height: calc(60dvh - 16px);
     color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: var(--nav-height) 1rem 2rem;
+    padding: calc(var(--nav-height) - 28px) 1rem 2rem;
     box-sizing: border-box;
 }
 
@@ -288,7 +289,7 @@ nav i {
 /* Tablet */
 @media (max-width: 768px) {
     .hero {
-        min-height: 50dvh;
+        min-height: calc(50dvh - 30px);
     }
     .hero-logo {
         width: clamp(180px, 55vw, 400px);
@@ -298,7 +299,7 @@ nav i {
 /* Mobile */
 @media (max-width: 480px) {
     .hero {
-        min-height: 45dvh;
+        min-height: calc(45dvh - 20px);
         padding-bottom: 1.5rem;
     }
     .hero-content {
@@ -1060,8 +1061,8 @@ button a {
 .c-text h1 {
     font-family: "Luckiest Guy", cursive;
     font-weight: 400;
-    font-size: clamp(32px, 4.5vw, 46px);
-    color: var(--surface);
+    font-size: clamp(38px, 5vw, 52px);
+    color: #ffffff;
     letter-spacing: 1px;
     position: relative;
     display: inline-block;
@@ -1204,7 +1205,7 @@ button a {
 
 @media (max-width: 720px) {
     .hero {
-        padding-top: calc(var(--nav-height) + 1rem);
+        padding-top: calc(var(--nav-height) - 12px);
     }
     .hero-content {
         padding: 1rem;
@@ -1226,8 +1227,25 @@ button a {
 
 @media (max-width: 520px) {
     nav {
-        height: auto;
-        padding: 0.75rem 1rem;
+        height: 64px;
+        padding: 0 1rem;
+    }
+    .sidebar {
+        width: 210px;
+        right: -210px;
+    }
+    nav .logo {
+        padding-top: 0;
+        align-items: center;
+    }
+    #logo1 {
+        top: 0;
+        width: 52px;
+        height: 52px;
+    }
+    #logo2 {
+        top: 0;
+        height: 36px;
     }
     .hero-content h1 {
         font-size: 2rem;
@@ -1456,10 +1474,14 @@ button a {
     margin-bottom: 14px;
 }
 
+.footer-brand {
+    color: #ddfaf8;
+}
+
 .footer-brand p {
     font-size: 13.5px;
     line-height: 1.6;
-    color: var(--accent);
+    color: #ddfaf8;
     max-width: 300px;
 }
 
@@ -1471,16 +1493,21 @@ button a {
     font-weight: 400;
 }
 
+.footer-col {
+    color: #ddfaf8;
+}
+
 .footer-col ul {
     list-style: none;
 }
 
 .footer-col ul li {
     margin-bottom: 10px;
+    color: #ddfaf8;
 }
 
 .footer-col ul li a {
-    color: var(--accent);
+    color: #ddfaf8;
     text-decoration: none;
     font-size: 13.5px;
     transition: color 0.15s ease;

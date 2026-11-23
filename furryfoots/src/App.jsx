@@ -3,6 +3,7 @@ import './App.css'
 import siteContent from './content/site-content.json'
 
 import aboutImage from '../../PETSHOP/img-1.jpeg'
+import contactImage from '../../PETSHOP/img-2.jpeg'
 import logoImage from '../../PETSHOP/logo.jpeg'
 import logoMark from '../../PETSHOP/edited-photo (2).png'
 import logoText from '../../PETSHOP/edited-photo (9).png'
@@ -302,7 +303,7 @@ function App() {
 
         <section className="contact" id="contact">
           <div className="c-text">
-            <h2>Get In Touch?</h2>
+            <h1>Get In Touch?</h1>
           </div>
           <div className="contact-wrap">
             <div className="c-sub-text">
@@ -358,7 +359,12 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="c-img" role="img" aria-label="A happy pet after grooming" />
+            <div
+              className="c-img"
+              role="img"
+              aria-label="A happy pet after grooming"
+              style={{ backgroundImage: `url("${contactImage}")` }}
+            />
           </div>
         </section>
 
