@@ -1378,6 +1378,7 @@ button a {
 .social {
     width: 100dvw;
     height: auto;
+    min-height:0;
     background: var(--nav); /* #ddfaf8, same tint as your navbar */
     padding: 2rem 1.5rem;
     text-align: center;
