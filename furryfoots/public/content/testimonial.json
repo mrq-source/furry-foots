@@ -1,0 +1,154 @@
+[
+  {
+    "id": 1,
+    "name": "Namya Gala",
+    "review": "Loved the service by both brothers.Loki enjoyed the environment of the studio. Its very calm.Will visit again",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 2,
+    "name": "Mehul Gosalia",
+    "review": "I had a great experience at Furry Foots dog grooming center! The place was very clean and well-maintained, which shows how seriously they take hygiene. My pet Max came back looking and smelling fantastic. The owner was especially helpful and clearly cares about both the pets and the customers. Highly recommended for all pet lovers.",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 3,
+    "name": "Neha mangtani",
+    "review": "Staff is very friendly & service was amazing",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 4,
+    "name": "Rohan Shah",
+    "review": "Furry Foots has been amazing! Super sweet and genuine people who really take care of the pets. You can tell they truly care and it makes a huge difference.",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 5,
+    "name": "Jaiswal roma",
+    "review": "The service was very good, the way everything is explained is commendable, my Gucci is very happy",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 6,
+    "name": "Shrushti manwar",
+    "review": "Just took my dog to get groomed. The staff were super friendly. He's usually a little nervous with grooming, but they were so patient and gentle with him.He came out looking and smelling amazing....and clean, fluffy.Really happy with the whole experience. You can tell they genuinely care about the animals. Definitely going back!.",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 7,
+    "name": "Aarshik",
+    "review": "Excellent grooming service! The team is professional, caring, and ensures every pet feels comfortable. The owner themself take utmost care and attention to provide a stress free grooming to our fur baby. The studio is spotless and hygienic. Highly recommended!",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 8,
+    "name": "Anjum Khan",
+    "review": "Impressive, great service, the staff handle my babies very nicely",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 9,
+    "name": "Yash mevada",
+    "review": "The boys are very sweet! They gave a fantastic hair cut & hair spa to Enzo. Very happy with the outcome. Must visit.",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 10,
+    "name": "Shweta more",
+    "review": "A very well service for pet I brought my angel for grooming and bathing the experience was very good",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 11,
+    "name": "Ishika chauhan",
+    "review": "Amazing experience. From hygiene to everything was just perfect. They groomed my pet so well with excellent care.",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 12,
+    "name": "Francis pinto",
+    "review": "Very happy with service provided. Have been to many places for a perfect pet grooming but this was the best place I have ever come across. They made my pet feel like home. Definitely we visiting you guyzz again Furry Foots. See you soon. Thanks alot",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 13,
+    "name": "Asmita dhuri",
+    "review": "We found the best pet grooming experience at Furry Foots, owned by the Meet. The staff here are truly kind and professional, making sure every pet feels comfortable and loved. My cat, Joy, had an incredible time; he absolutely loved the company and his pampering spa session. He left looking fabulous and feeling incredibly relaxed.",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 14,
+    "name": "Saber ishaq",
+    "review": "extremely professional and great job done, my dogs were comfortable and looked fresh when they were done! would definitely be sending my dogs back for the services provided",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 15,
+    "name": "Namrata poswal",
+    "review": "Great grooming experience! Staff was gentle and caring. My dog looked clean, happy, and smelled amazing. Highly recommend!",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 16,
+    "name": "Hirender choudhary",
+    "review": "I absolutely loved my experience. My baby bruno enjoyed it very much and they handled him with extreme love and care! Will definitely visit again",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 17,
+    "name": "Deepak choudhary",
+    "review": "I had an awesome experience with your pet grooming service! I'm really happy with the care and attention given to my dog. A special thanks the entire staff they handled my dog very carefully and patiently. Truly professional service. Highly recommended!Thank you Furry foots",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 18,
+    "name": "Divya mehta",
+    "review": "I couldn't be happier with the grooming service my pet received! My pet had quite a few knots, but they were so gentle and took care of everything without causing any pain. The groomers were super kind and caring. I'm really happy with how everything turned out!",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  },
+  {
+    "id": 19,
+    "name": "Blazing fire gaming",
+    "review": "Had a fantastic experience at Furry Foots! The groomers were kind, skilled, and made my pet feel completely at ease. The attention to detail, cleanliness, and genuine care they provide is unmatched. My furry friend came out looking better than ever soft, clean, and tail-wagging happy. 5 stars all the way!",
+    "rating": 5,
+    "image": "",
+    "visible": true
+  }
+]

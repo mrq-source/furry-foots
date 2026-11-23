@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
-import siteContent from './content/site-content.json'
+import siteContent from './content/gallary.json'
 
 import aboutImage from '../../PETSHOP/img-1.jpeg'
 import contactImage from '../../PETSHOP/img-2.jpeg'
@@ -59,7 +59,7 @@ const services = [
   },
 ]
 
-const { gallery: galleryImages, testimonials } = siteContent
+const { gallery: galleryImages } = siteContent
 
 const mediaUrl = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
 
@@ -75,8 +75,24 @@ const navigation = [
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [overlay, setOverlay] = useState(null)
+  const [testimonials, setTestimonials] = useState([])
   const galleryRef = useRef(null)
   const testimonialTrackRef = useRef(null)
+
+  useEffect(() => {
+    const loadTestimonials = async () => {
+      try {
+        const response = await fetch(`${import.meta.env.BASE_URL}content/testimonial.json`)
+        if (!response.ok) throw new Error('Unable to load testimonials')
+        const items = await response.json()
+        setTestimonials(items.filter((testimonial) => testimonial.visible))
+      } catch {
+        setTestimonials([])
+      }
+    }
+
+    loadTestimonials()
+  }, [])
 
   useEffect(() => {
     const track = testimonialTrackRef.current
@@ -93,7 +109,7 @@ function App() {
     updateOverflowButtons()
     window.addEventListener('resize', updateOverflowButtons)
     return () => window.removeEventListener('resize', updateOverflowButtons)
-  }, [])
+  }, [testimonials])
 
   useEffect(() => {
     if (!overlay) return undefined
