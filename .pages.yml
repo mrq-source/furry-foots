@@ -1,0 +1,54 @@
+media:
+  - name: images
+    label: Pet photos
+    input: furryfoots/public/uploads
+    output: /uploads
+    extensions: [jpg, jpeg, png, webp]
+    categories: [image]
+    rename: safe
+
+content:
+  - name: site-content
+    label: Pet room and testimonials
+    type: file
+    path: furryfoots/src/content/site-content.json
+    format: json
+    fields:
+      - name: gallery
+        label: Pet room photos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{alt}"
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            required: true
+            options:
+              media: images
+          - name: alt
+            label: Photo description
+            type: string
+            required: true
+          - name: position
+            label: Crop position
+            type: string
+            description: "CSS background position, such as center or center -30px."
+      - name: testimonials
+        label: Testimonials
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name}"
+        fields:
+          - name: name
+            label: Customer name
+            type: string
+            required: true
+          - name: review
+            label: Review
+            type: text
+            required: true
